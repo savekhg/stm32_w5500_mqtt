@@ -152,7 +152,7 @@ void     WIZCHIP_READ_BUF (uint32_t AddrSel, uint8_t* pBuf, uint16_t len)
    WIZCHIP.CS._deselect();
    WIZCHIP_CRITICAL_EXIT();
 }
-
+// 0x00000900, pointer , 6
 void     WIZCHIP_WRITE_BUF(uint32_t AddrSel, uint8_t* pBuf, uint16_t len)
 {
    uint8_t spi_data[3];
@@ -162,13 +162,16 @@ void     WIZCHIP_WRITE_BUF(uint32_t AddrSel, uint8_t* pBuf, uint16_t len)
    WIZCHIP.CS._select();
 
    AddrSel |= (_W5500_SPI_WRITE_ | _W5500_SPI_VDM_OP_);
-
+   // AddrSel = 0x00000900    0x04  = 0x04 | 0x00
+   // AddrSel : 0x00000904
+   // Address : 0x0009 / WRITE / VDM
    if(!WIZCHIP.IF.SPI._write_burst) 	// byte operation
    {
-		WIZCHIP.IF.SPI._write_byte((AddrSel & 0x00FF0000) >> 16);
-		WIZCHIP.IF.SPI._write_byte((AddrSel & 0x0000FF00) >>  8);
-		WIZCHIP.IF.SPI._write_byte((AddrSel & 0x000000FF) >>  0);
+		WIZCHIP.IF.SPI._write_byte((AddrSel & 0x00FF0000) >> 16); // hex right 4 : 0x00000000
+		WIZCHIP.IF.SPI._write_byte((AddrSel & 0x0000FF00) >>  8); // hex right 2 : 0x00000009
+		WIZCHIP.IF.SPI._write_byte((AddrSel & 0x000000FF) >>  0); // hex right 0 : 0x00000004
 		for(i = 0; i < len; i++)
+			// 6 length mac address
 			WIZCHIP.IF.SPI._write_byte(pBuf[i]);
    }
    else									// burst operation

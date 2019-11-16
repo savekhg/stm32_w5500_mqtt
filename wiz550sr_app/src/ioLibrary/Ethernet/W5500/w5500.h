@@ -231,6 +231,7 @@
  * @ingroup Common_register_group
  * @brief Source MAC Register address(R/W)
  * @details @ref SHAR configures the source hardware address.
+ * 0x00000900
  */
 #define SHAR               (_W5500_IO_BASE_ + (0x0009 << 8) + (WIZCHIP_CREG_BLOCK << 3))
 
