@@ -891,9 +891,11 @@ int8_t check_DHCP_leasedIP(void)
 	}
 }	
 
+// s - SOCK_DHCP:3
 void DHCP_init(uint8_t s, uint8_t * buf)
 {
    uint8_t zeroip[4] = {0,0,0,0};
+   // DHCP_CHADDR[6] - DHCP Client MAC address.
    getSHAR(DHCP_CHADDR);
    if((DHCP_CHADDR[0] | DHCP_CHADDR[1]  | DHCP_CHADDR[2] | DHCP_CHADDR[3] | DHCP_CHADDR[4] | DHCP_CHADDR[5]) == 0x00)
    {
