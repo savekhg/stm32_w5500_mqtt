@@ -100,10 +100,18 @@ int application_update(void)
 int main(int argc, char* argv[])
 {
 	int ret;
+	/*
+	 * 02 OCT 19
+	 * S2E Serial to ethernet
+	 */
 #if defined(WIZ1x0SR_CFGTOOL)
 	S2E_Packet *value = get_S2E_Packet_pointer();
 #endif
 
+	/*
+	 * 02 OCT 19
+	 * RCC : Runtime Clock Control
+	 */
 	RCC_Configuration();
 	GPIO_Configuration();
 	

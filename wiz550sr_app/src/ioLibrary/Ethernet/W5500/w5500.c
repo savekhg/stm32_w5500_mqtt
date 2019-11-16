@@ -161,6 +161,7 @@ void     WIZCHIP_WRITE_BUF(uint32_t AddrSel, uint8_t* pBuf, uint16_t len)
    WIZCHIP_CRITICAL_ENTER();
    WIZCHIP.CS._select();
 
+   // 0x
    AddrSel |= (_W5500_SPI_WRITE_ | _W5500_SPI_VDM_OP_);
 
    if(!WIZCHIP.IF.SPI._write_burst) 	// byte operation
