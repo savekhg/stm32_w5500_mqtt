@@ -112,8 +112,11 @@ int main(int argc, char* argv[])
 	Timer_Configuration();
 
 	Mac_Conf();
-	// SOCK_DHCP 3, DHCP 개념을 한번 찾아봄.
+	// 16 NOV 19
+	// SOCK_DHCP : 3
+	// DHCP 개념을 찾아봄
 	DHCP_init(SOCK_DHCP, g_send_buf);
+	// w5500_dhcp_assign : function , w5500_dhcp_conflict : function
 	reg_dhcp_cbfunc(w5500_dhcp_assign, w5500_dhcp_assign, w5500_dhcp_conflict);
 
 #ifdef _MAIN_DEBUG_
