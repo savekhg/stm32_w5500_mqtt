@@ -112,7 +112,9 @@ int main(int argc, char* argv[])
 	Timer_Configuration();
 
 	Mac_Conf();
+	// 16 NOV 19
 	// SOCK_DHCP : 3
+	// DHCP 개념을 찾아봄
 	DHCP_init(SOCK_DHCP, g_send_buf);
 	// w5500_dhcp_assign : function , w5500_dhcp_conflict : function
 	reg_dhcp_cbfunc(w5500_dhcp_assign, w5500_dhcp_assign, w5500_dhcp_conflict);
@@ -128,6 +130,7 @@ int main(int argc, char* argv[])
 	printf(" # Device Name : %s\r\n\r\n", value->module_name);
 #endif
 
+	// 16 NOV 19 진도 여기까지
 	/* Initialize Network Information */
 	if(value->options.dhcp_use) {		// DHCP
 		uint32_t ret;
