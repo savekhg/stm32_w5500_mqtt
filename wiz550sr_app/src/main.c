@@ -177,7 +177,7 @@ int main(int argc, char* argv[])
 				DHCP_run();
 		}
 	}
-
+	// 21 NOV 19 진도 여기까지
 	atc_init();
 
 	op_mode = OP_DATA;
