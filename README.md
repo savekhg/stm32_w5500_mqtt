@@ -6,7 +6,7 @@ Mission
 
 Study Resources
 ------------
-* WIZNET : <https://www.wiznet.io/ko/product-item/wiz550sr-evb/>
+* WIZNET : <https://wizwiki.net/wiki/doku.php/products:wiz550sr:start>
 * Eclipse IDE for C/C++ Developers (2019-09 R)
 * ARM GCC 4.8.3
 
@@ -33,4 +33,12 @@ Mac address를 SPI로 전달해서 저장하는 부분이 신기했다.
 
 28 November 2019 (Thursday)
 ------------
+* App 소스코드 분석 완료 (1차)
 
+05 December 2019 (Thurday)
+-----------
+* DHCP, DNS, TCP/IP, LIN 등 프로토콜 개념 Revisit.
+
+12 December 2019 (Thursday)
+----------
+* MQTT

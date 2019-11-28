@@ -1,12 +1,14 @@
 tags
 .DS_Store
 .metadata/
+.project
 RemoteSystemsTempFiles/
 wiz550sr_bootloader/Debug/
 wiz550sr_bootloader/.cproject
 wiz550sr_bootloader/.project
 wiz550sr_bootloader/.settings/language.settings.xml
 wiz550sr_app/Debug/
+wiz550sr_app/.settings
 wiz550sr_app/.cproject
 wiz550sr_app/.project
 wiz550sr_app/.settings/language.settings.xml
