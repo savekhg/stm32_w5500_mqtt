@@ -37,7 +37,9 @@ Mac address를 SPI로 전달해서 저장하는 부분이 신기했다.
 
 05 December 2019 (Thurday)
 -----------
+10 December 2019 (Tuesday) 로 연기
 * DHCP, DNS, TCP/IP, LIN 등 프로토콜 개념 Revisit.
+* DHCP 개괄 : <https://namu.wiki/w/DHCP>
 
 12 December 2019 (Thursday)
 ----------
