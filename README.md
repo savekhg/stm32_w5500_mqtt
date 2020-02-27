@@ -44,3 +44,11 @@ Mac address를 SPI로 전달해서 저장하는 부분이 신기했다.
 12 December 2019 (Thursday)
 ----------
 * MQTT
+
+... 공백
+
+27 February 2020 (Thursday)
+----------
+* WIZNet 보드 어플리케이션에 MQTT Client 탑재할 것
+* Publish, Subscribe 동작 및 Raspberry PI에서 Message 확인 가능할 것
+* 다음 모임은 차주 화요일 (03 March 2020)
